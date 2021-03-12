@@ -1,23 +1,27 @@
 import UIKit
 
-var nome = "maçã"
-let felicidade = 5
-let calorias: Double = 79.5
+let caloria1 = 50.5
+let caloria2 = 100
+let caloria3 = 300
+let caloria4 = 400
 
-let vegetal: Bool = false
-
-
-var endereco = "Uberlandia"
-
+let totalDeCalorias = [50.5, 100, 300, 500, 600, 25.5]
+print(totalDeCalorias)
 //
-//func alimentoConsumido(){
-//    print("o alimento consumido foi: \(nome)")
+//
+////primeira  maneira de escrever o for
+//for i in 0...3{
+//    print(i)
+//    print(totalDeCalorias[i])
 //}
-//alimentoConsumido()
-//alimentoConsumido()
+////segunda maneira de escrever o for
+//for i in 0...totalDeCalorias.count-1 {
+//    print(i)
+//    print(totalDeCalorias[i])
+//}
+// Terceira e mais utilizada forma de escrever o for
 
-func alimentoConsumido(_ nome: String, _ calorias: Double, _ felicidade: Int){
-    print("o alimento consumido foi \(nome), com: \(calorias) calorias e a felicidade foi nível \(felicidade)")
+for caloria in totalDeCalorias {
+    print(caloria)
 }
 
- alimentoConsumido(nome, calorias, felicidade)
