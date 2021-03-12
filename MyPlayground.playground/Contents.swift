@@ -1,18 +1,33 @@
 import UIKit
 
-let totalDeCalorias = [50.5, 100]
+//primeira refeição
+var nomeAlimento = "Maçã"
+var felicidade: String = "5"
 
-// Array também pode ser inicializado no seguinte formato: [Double]
-func todasCalorias( totalDeCalorias: Array<Double>) -> Double {
-    var total = 0.0
-    
-    for caloria in totalDeCalorias {
-        total += caloria
-    }
-    
-    return total
+//segunda refeição
+
+let nomeAlimento1: String = "Banana"
+let felicidade2: String = "4"
+
+//----------------------------------
+
+// A solução para agrupar as caracteristicas é criar uma classe
+
+class Refeicao {
+    var nomeAlimento: String = "Maçã"
+    let felicidade: String = "5"
+}
+//instanciar a classe
+
+let refeição = Refeicao()
+
+print(refeição.nomeAlimento)
+
+class Refeicao2 {
+    var nome: String = "Laranja"
+    var felicidade: String = "4"
 }
 
-let total = todasCalorias(totalDeCalorias: [50.5, 100, 200])
+var refeicao2 = Refeicao2()
 
-print(total)
+print(refeicao2.nome)
