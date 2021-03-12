@@ -37,6 +37,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EA990C7125FAD69B00C252C6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EA990C7225FAD6A300C252C6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EAA4BDFD25FA6503000906DB /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		EA990C7325FAD6AE00C252C6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EAA4BDFF25FA6503000906DB /* Main.storyboard */,
+				EAA4BE0425FA6507000906DB /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		EAA4BDED25FA6503000906DB = {
 			isa = PBXGroup;
 			children = (
@@ -56,12 +80,12 @@
 		EAA4BDF825FA6503000906DB /* eggplant-brownie */ = {
 			isa = PBXGroup;
 			children = (
+				EA990C7325FAD6AE00C252C6 /* View */,
+				EA990C7225FAD6A300C252C6 /* Controller */,
+				EA990C7125FAD69B00C252C6 /* Model */,
 				EAA4BDF925FA6503000906DB /* AppDelegate.swift */,
 				EAA4BDFB25FA6503000906DB /* SceneDelegate.swift */,
-				EAA4BDFD25FA6503000906DB /* ViewController.swift */,
-				EAA4BDFF25FA6503000906DB /* Main.storyboard */,
 				EAA4BE0225FA6507000906DB /* Assets.xcassets */,
-				EAA4BE0425FA6507000906DB /* LaunchScreen.storyboard */,
 				EAA4BE0725FA6507000906DB /* Info.plist */,
 			);
 			path = "eggplant-brownie";
