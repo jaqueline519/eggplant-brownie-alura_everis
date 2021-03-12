@@ -1,33 +1,42 @@
 import UIKit
 
-//primeira refeição
-var nomeAlimento = "Maçã"
-var felicidade: String = "5"
-
-//segunda refeição
-
-let nomeAlimento1: String = "Banana"
-let felicidade2: String = "4"
-
-//----------------------------------
-
-// A solução para agrupar as caracteristicas é criar uma classe
-
 class Refeicao {
-    var nomeAlimento: String = "Maçã"
-    let felicidade: String = "5"
+    var nomeAlimento: String?
+    var felicidade: String?
 }
 //instanciar a classe
 
-let refeição = Refeicao()
+let refeicao = Refeicao()
+refeicao.nomeAlimento = "Banana"
 
-print(refeição.nomeAlimento)
+//cuidado com o forced unwrap
 
-class Refeicao2 {
-    var nome: String = "Laranja"
-    var felicidade: String = "4"
+/*forma de verificar se o valor opcional é nulo ( esta forma não costuma ser utilizada"
+ */
+
+if refeicao.nomeAlimento != nil {
+ 
+ print(refeicao.nomeAlimento!)
 }
 
-var refeicao2 = Refeicao2()
 
-print(refeicao2.nome)
+//Boas práticas para extrair valores opcionais:
+
+if let nome = refeicao.nomeAlimento {
+     print(nome)
+}
+
+//guard let (maneira mais utilizada)
+
+func exibNomeDaRefeicao() {
+    if let nome = refeicao.nomeAlimento{
+        print(nome)
+    }
+    guard  let nome1 = refeicao.nomeAlimento else {
+        return
+    }
+    print(nome1)
+}
+
+exibNomeDaRefeicao()
+
