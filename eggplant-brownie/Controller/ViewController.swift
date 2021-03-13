@@ -9,16 +9,26 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet var nomeTextField: UITextField!
-    @IBOutlet weak var felicidadeTexField: UITextField!
+    @IBOutlet var nomeTextField: UITextField?
+    @IBOutlet weak var felicidadeTexField: UITextField?
     
     //creash = quando o app fecha inesperadamente
     
     @IBAction func adicionar(_sander: Any){
-        let nome = nomeTextField.text
-        let felicidade = felicidadeTexField.text
-        print("comi: \(nome) e fiquei com felicidade: \(felicidade)")
+
+        if let nomeDaRefeicao = nomeTextField?.text, let felicidadeDaRefeicao = felicidadeTexField?.text {
+
+            let nome = nomeDaRefeicao
+            if let felicidade = Int (felicidadeDaRefeicao){
+                let refeicao =  Refeicao( tipoDeRefeicao: nome, nivelDeFelicidade: felicidade)
+
+                print("comi \(refeicao.nome) e fiquei com felicidade nível: \(refeicao.felicidade)")
+            } else{
+                print("erro ao tentar a refeição")
+            }
+
     }
 
-
+}
+    
 }
