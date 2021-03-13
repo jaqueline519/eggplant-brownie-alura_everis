@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		EA661E1B25FC6AB900FB3299 /* Refeicao.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA661E1A25FC6AB900FB3299 /* Refeicao.swift */; };
 		EA661E1E25FC6BB900FB3299 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA661E1D25FC6BB900FB3299 /* Item.swift */; };
+		EA9D292825FD5D5F00B10BA7 /* RefecoesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9D292725FD5D5F00B10BA7 /* RefecoesTableViewController.swift */; };
 		EAA4BDFA25FA6503000906DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA4BDF925FA6503000906DB /* AppDelegate.swift */; };
 		EAA4BDFC25FA6503000906DB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA4BDFB25FA6503000906DB /* SceneDelegate.swift */; };
 		EAA4BDFE25FA6503000906DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA4BDFD25FA6503000906DB /* ViewController.swift */; };
@@ -21,6 +22,7 @@
 		EA4E5CFC25FB34E400CAD743 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		EA661E1A25FC6AB900FB3299 /* Refeicao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Refeicao.swift; sourceTree = "<group>"; };
 		EA661E1D25FC6BB900FB3299 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		EA9D292725FD5D5F00B10BA7 /* RefecoesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefecoesTableViewController.swift; sourceTree = "<group>"; };
 		EAA4BDF625FA6503000906DB /* eggplant-brownie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "eggplant-brownie.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAA4BDF925FA6503000906DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EAA4BDFB25FA6503000906DB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				EAA4BDFD25FA6503000906DB /* ViewController.swift */,
+				EA9D292725FD5D5F00B10BA7 /* RefecoesTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -170,6 +173,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA661E1E25FC6BB900FB3299 /* Item.swift in Sources */,
+				EA9D292825FD5D5F00B10BA7 /* RefecoesTableViewController.swift in Sources */,
 				EAA4BDFE25FA6503000906DB /* ViewController.swift in Sources */,
 				EAA4BDFA25FA6503000906DB /* AppDelegate.swift in Sources */,
 				EAA4BDFC25FA6503000906DB /* SceneDelegate.swift in Sources */,
