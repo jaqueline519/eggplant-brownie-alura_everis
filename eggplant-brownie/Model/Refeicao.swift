@@ -12,9 +12,10 @@ class Refeicao: NSObject {
     var felicidade: Int
     var itens: Array<Item> = []
 
-    init(tipoDeRefeicao: String, nivelDeFelicidade: Int) {
-        self.nome = tipoDeRefeicao
-        self.felicidade = nivelDeFelicidade
+    init(nome: String, felicidade: Int, itens: [Item] = []) {
+        self.nome = nome
+        self.felicidade = felicidade
+        self.itens = itens
 
     func totalDeCalorias() -> Double {
         var total = 0.0

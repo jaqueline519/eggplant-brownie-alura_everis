@@ -7,11 +7,11 @@
 import UIKit
 
 class Item: NSObject {
-    var item: String
+    var nome: String
     var calorias: Double
 
-    init(nomeDoItem: String, qtdDeCalorias: Double) {
-        self.item = nomeDoItem
-        self.calorias = qtdDeCalorias
+    init(nome: String, calorias: Double) {
+        self.nome = nome
+        self.calorias = calorias
     }
 }
