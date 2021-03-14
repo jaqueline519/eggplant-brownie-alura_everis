@@ -39,7 +39,7 @@
                     <navigationItem key="navigationItem" id="CMp-H9-CEm">
                         <barButtonItem key="rightBarButtonItem" title="Add" id="iqO-3e-uzG">
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="show" id="Guw-b0-u2i"/>
+                                <segue destination="BYZ-38-t0r" kind="show" identifier="adicionar" id="Guw-b0-u2i"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -117,7 +117,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="HfI-Dt-dmx"/>
                     <connections>
-                        <outlet property="felicidadeTexField" destination="BaZ-qO-uPm" id="nqs-oM-yg6"/>
+                        <outlet property="felicidadeTextField" destination="BaZ-qO-uPm" id="Hqj-i3-Uae"/>
                         <outlet property="nomeTextField" destination="T2z-G3-lg3" id="oKJ-pM-g6N"/>
                     </connections>
                 </viewController>

@@ -9,26 +9,29 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    var tableViewController: RefeicoesTableViewController?
+
     @IBOutlet var nomeTextField: UITextField?
-    @IBOutlet weak var felicidadeTexField: UITextField?
+    @IBOutlet weak var felicidadeTextField: UITextField?
     
     //creash = quando o app fecha inesperadamente
     
     @IBAction func adicionar(_sander: Any){
 
-        if let nomeDaRefeicao = nomeTextField?.text, let felicidadeDaRefeicao = felicidadeTexField?.text {
+        guard let nomeDaRefeicao = nomeTextField?.text else {
+                    return
+                }
 
-            let nome = nomeDaRefeicao
-            if let felicidade = Int (felicidadeDaRefeicao){
-                let refeicao =  Refeicao( tipoDeRefeicao: nome, nivelDeFelicidade: felicidade)
+                guard let felicidadeDaRefeicao = felicidadeTextField?.text, let felicidade = Int(felicidadeDaRefeicao) else {
+                    return
+                }
 
-                print("comi \(refeicao.nome) e fiquei com felicidade nível: \(refeicao.felicidade)")
-            } else{
-                print("erro ao tentar a refeição")
+                let refeicao = Refeicao(tipoDeRefeicao: nomeDaRefeicao, nivelDeFelicidade: felicidade)
+
+                print("comi \(refeicao.nome) e fiquei com felicidade: \(refeicao.felicidade)")
+
+        tableViewController?.add(refeicao)
+                navigationController?.popViewController(animated: true)
+
             }
-
-    }
-
-}
-    
-}
+        }
