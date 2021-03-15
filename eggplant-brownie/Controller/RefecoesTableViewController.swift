@@ -9,7 +9,7 @@ import UIKit
 class RefeicoesTableViewController: UITableViewController, AdicionaRefeicaoDelegate {
 
     var refeicoes = [Refeicao(nome: "Pão", felicidade: 1), Refeicao(nome: "Iogurte", felicidade: 5), Refeicao(nome: "Laranja", felicidade: 3)]
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return refeicoes.count
     }
@@ -40,8 +40,14 @@ class RefeicoesTableViewController: UITableViewController, AdicionaRefeicaoDeleg
             let refeicao = refeicoes[indexPath.row]
             
             let alerta = UIAlertController(title: refeicao.nome, message: refeicao.detalhes(), preferredStyle: .alert)
-            let botaoCancelar = UIAlertAction(title: "ok", style: .cancel, handler: nil)
+            
+            let botaoCancelar = UIAlertAction(title: "ok", style: .cancel)
             alerta.addAction(botaoCancelar)
+            
+            let botaoRemover = UIAlertAction(title: "Remover", style: .destructive, handler: { alerta in self.refeicoes.remove(at: indexPath.row)
+                self.tableView.reloadData()
+            })
+            alerta.addAction(botaoRemover)
             
             present(alerta, animated: true, completion: nil)
         }

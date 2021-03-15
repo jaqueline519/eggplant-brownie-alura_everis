@@ -16,7 +16,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     //MARK: - IBOutlet
     
     
-    @IBOutlet weak var itensTableView: UITableView!
+    @IBOutlet weak var itensTableView: UITableView?
     
     // MARK: - ATRIBUTOS
     
@@ -46,9 +46,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     func add(_ item: Item) {
         itens.append(item)
-        itensTableView.reloadData()
+        
+        if let tableView = itensTableView {
+            tableView.reloadData()
+        }else{
+            Alerta(controller: self).exibe(mensagem:"Erro ao atualizar tabela")
+        }
+        
     }
-    
     
     // MARK: - UITableViewDataSource
     
@@ -86,21 +91,30 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
             }
         }
     
-    // MARK: - IBActions
-    
-    @IBAction func adicionar(_sander: Any){
+    func recuperaRefeicaoDoFormulário() -> Refeicao? {
         
         guard let nomeDaRefeicao = nomeTextField?.text else {
-                    return
+            return nil
                 }
 
                 guard let felicidadeDaRefeicao = felicidadeTextField?.text, let felicidade = Int(felicidadeDaRefeicao) else {
-                    return
+                    return nil
                 }
+        
+        let refeicao = Refeicao(nome: nomeDaRefeicao, felicidade: felicidade, itens: itensSelecionados)
+        
+        return refeicao
+    }
+    // MARK: - IBActions
+    
+    @IBAction func adicionar(_sander: Any){
 
-                let refeicao = Refeicao(nome: nomeDaRefeicao, felicidade: felicidade, itens: itensSelecionados)
-        delegate?.add(refeicao)
-                navigationController?.popViewController(animated: true)
+        if let refeicao = recuperaRefeicaoDoFormulário(){
+            delegate?.add(refeicao)
+            navigationController?.popViewController(animated: true)
+        } else{
+            Alerta(controller: self).exibe(mensagem: "Erro ao ler o campo felicidade")
+        }
 
             }
-        }
+    }
