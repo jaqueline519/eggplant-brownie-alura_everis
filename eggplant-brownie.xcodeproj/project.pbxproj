@@ -10,6 +10,8 @@
 		EA661E1B25FC6AB900FB3299 /* Refeicao.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA661E1A25FC6AB900FB3299 /* Refeicao.swift */; };
 		EA661E1E25FC6BB900FB3299 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA661E1D25FC6BB900FB3299 /* Item.swift */; };
 		EA9D292825FD5D5F00B10BA7 /* RefecoesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9D292725FD5D5F00B10BA7 /* RefecoesTableViewController.swift */; };
+		EAA1659E25FEC06400BBFBC8 /* AdicionarItensViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA1659C25FEC06400BBFBC8 /* AdicionarItensViewController.swift */; };
+		EAA1659F25FEC06400BBFBC8 /* AdicionarItensViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAA1659D25FEC06400BBFBC8 /* AdicionarItensViewController.xib */; };
 		EAA4BDFA25FA6503000906DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA4BDF925FA6503000906DB /* AppDelegate.swift */; };
 		EAA4BDFC25FA6503000906DB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA4BDFB25FA6503000906DB /* SceneDelegate.swift */; };
 		EAA4BDFE25FA6503000906DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA4BDFD25FA6503000906DB /* ViewController.swift */; };
@@ -23,6 +25,8 @@
 		EA661E1A25FC6AB900FB3299 /* Refeicao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Refeicao.swift; sourceTree = "<group>"; };
 		EA661E1D25FC6BB900FB3299 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		EA9D292725FD5D5F00B10BA7 /* RefecoesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefecoesTableViewController.swift; sourceTree = "<group>"; };
+		EAA1659C25FEC06400BBFBC8 /* AdicionarItensViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdicionarItensViewController.swift; sourceTree = "<group>"; };
+		EAA1659D25FEC06400BBFBC8 /* AdicionarItensViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdicionarItensViewController.xib; sourceTree = "<group>"; };
 		EAA4BDF625FA6503000906DB /* eggplant-brownie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "eggplant-brownie.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAA4BDF925FA6503000906DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EAA4BDFB25FA6503000906DB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +60,7 @@
 		EA990C7225FAD6A300C252C6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				EAA1659C25FEC06400BBFBC8 /* AdicionarItensViewController.swift */,
 				EAA4BDFD25FA6503000906DB /* ViewController.swift */,
 				EA9D292725FD5D5F00B10BA7 /* RefecoesTableViewController.swift */,
 			);
@@ -67,6 +72,7 @@
 			children = (
 				EAA4BDFF25FA6503000906DB /* Main.storyboard */,
 				EAA4BE0425FA6507000906DB /* LaunchScreen.storyboard */,
+				EAA1659D25FEC06400BBFBC8 /* AdicionarItensViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -161,6 +167,7 @@
 			files = (
 				EAA4BE0625FA6507000906DB /* LaunchScreen.storyboard in Resources */,
 				EAA4BE0325FA6507000906DB /* Assets.xcassets in Resources */,
+				EAA1659F25FEC06400BBFBC8 /* AdicionarItensViewController.xib in Resources */,
 				EAA4BE0125FA6503000906DB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -174,6 +181,7 @@
 			files = (
 				EA661E1E25FC6BB900FB3299 /* Item.swift in Sources */,
 				EA9D292825FD5D5F00B10BA7 /* RefecoesTableViewController.swift in Sources */,
+				EAA1659E25FEC06400BBFBC8 /* AdicionarItensViewController.swift in Sources */,
 				EAA4BDFE25FA6503000906DB /* ViewController.swift in Sources */,
 				EAA4BDFA25FA6503000906DB /* AppDelegate.swift in Sources */,
 				EAA4BDFC25FA6503000906DB /* SceneDelegate.swift in Sources */,

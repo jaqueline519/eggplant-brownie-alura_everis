@@ -11,7 +11,12 @@ protocol AdicionaRefeicaoDelegate {
     func add(_ refeicao: Refeicao)
 }
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, AdicionaItensDelegate{
+    
+    //MARK: - IBOutlet
+    
+    
+    @IBOutlet weak var itensTableView: UITableView!
     
     // MARK: - ATRIBUTOS
     
@@ -25,6 +30,25 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     @IBOutlet var nomeTextField: UITextField?
     @IBOutlet weak var felicidadeTextField: UITextField?
+    
+    // MARK: - ciclo de vida da View
+    
+    override func viewDidLoad(){
+        let botaoAdicionarItem = UIBarButtonItem(title: "adicionar", style: .plain, target: self , action: #selector(adicionarItens) )
+        navigationItem.rightBarButtonItem = botaoAdicionarItem
+        
+    }
+    
+    @objc func adicionarItens() {
+        let adicionarItensViewController = AdicionarItensViewController(delegate: self)
+        //navegar para a próxima tela: navigationController.push()
+        navigationController?.pushViewController(adicionarItensViewController, animated: true)
+    }
+    func add(_ item: Item) {
+        itens.append(item)
+        itensTableView.reloadData()
+    }
+    
     
     // MARK: - UITableViewDataSource
     
@@ -75,10 +99,6 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
                 }
 
                 let refeicao = Refeicao(nome: nomeDaRefeicao, felicidade: felicidade, itens: itensSelecionados)
-    
-
-                print("comi \(refeicao.nome) e fiquei com felicidade: \(refeicao.felicidade)")
-
         delegate?.add(refeicao)
                 navigationController?.popViewController(animated: true)
 
