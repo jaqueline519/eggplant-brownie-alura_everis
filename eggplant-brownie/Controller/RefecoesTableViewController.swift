@@ -10,6 +10,22 @@ class RefeicoesTableViewController: UITableViewController, AdicionaRefeicaoDeleg
 
     var refeicoes = [Refeicao(nome: "Pão", felicidade: 1), Refeicao(nome: "Iogurte", felicidade: 5), Refeicao(nome: "Laranja", felicidade: 3)]
     
+    override func viewDidLoad() {
+        guard let diretorio = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else { return }
+        
+        let caminho = diretorio.appendingPathComponent("Refeicao")
+        
+        do {
+            let dados = try Data(contentsOf: caminho)
+            guard let refeicoesSalvas = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(dados) as? Array<Refeicao> else { return}
+            refeicoes = refeicoesSalvas
+            
+        } catch {
+            print(error.localizedDescription)
+        }
+        
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return refeicoes.count
     }
@@ -31,35 +47,39 @@ class RefeicoesTableViewController: UITableViewController, AdicionaRefeicaoDeleg
     
     func add(_ refeicao: Refeicao) {
         refeicoes.append(refeicao)
-        tableView.reloadData()    }
-
-    @objc func mostrarDetalhes(_ gesture: UILongPressGestureRecognizer) {
+        tableView.reloadData()
+        
+        guard let diretorio = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else { return }
+        
+        let caminho = diretorio.appendingPathComponent("Refeicao")
+        
+        do {
+        let dados = try NSKeyedArchiver.archivedData(withRootObject: refeicoes, requiringSecureCoding: false)
+            try dados.write(to: caminho)
+  
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
+        @objc func mostrarDetalhes(_ gesture: UILongPressGestureRecognizer) {
         if gesture.state == .began {
             let celula = gesture.view as! UITableViewCell
             guard let indexPath = tableView.indexPath(for: celula) else { return }
             let refeicao = refeicoes[indexPath.row]
-            
-            let alerta = UIAlertController(title: refeicao.nome, message: refeicao.detalhes(), preferredStyle: .alert)
-            
-            let botaoCancelar = UIAlertAction(title: "ok", style: .cancel)
-            alerta.addAction(botaoCancelar)
-            
-            let botaoRemover = UIAlertAction(title: "Remover", style: .destructive, handler: { alerta in self.refeicoes.remove(at: indexPath.row)
+    
+            RemoveRefeicaoViewController(controller: self).exibe(refeicao, handler: {
+                aler in
+                self.refeicoes.remove(at: indexPath.row)
                 self.tableView.reloadData()
             })
-            alerta.addAction(botaoRemover)
-            
-            present(alerta, animated: true, completion: nil)
-        }
     }
-    
+}
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "adicionar" {
         if let viewController = segue.destination as? ViewController {
             viewController.delegate = self
+            }
         }
-        
     }
-}
 }

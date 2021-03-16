@@ -7,16 +7,33 @@
 
 import UIKit
 
-class Refeicao: NSObject {
-    var nome: String
-    var felicidade: Int
+class Refeicao: NSObject, NSCoding {
+    
+    let nome: String
+    let felicidade: Int
     var itens: Array<Item> = []
 
     init(nome: String, felicidade: Int, itens: [Item] = []) {
         self.nome = nome
         self.felicidade = felicidade
         self.itens = itens
-
+    }
+    
+    //MARK: -NSCoding
+    
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(nome, forKey: "Nome")
+        aCoder.encode(felicidade, forKey: "Felicidade")
+        aCoder.encode(itens, forKey: "Itens")
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        nome = aDecoder.decodeObject(forKey: "Nome") as! String
+        felicidade = aDecoder.decodeInteger(forKey: "Felicidade")
+        itens = aDecoder.decodeObject(forKey: "Itens") as! Array<Item>
+        
+    }
+    
     func totalDeCalorias() -> Double {
         var total = 0.0
 
@@ -26,7 +43,6 @@ class Refeicao: NSObject {
 
         return total
     }
-}
     
     func detalhes() -> String {
         var mensagem = "Felicidade: \(felicidade)"

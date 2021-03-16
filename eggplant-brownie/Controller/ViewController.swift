@@ -109,11 +109,11 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
     
     @IBAction func adicionar(_sander: Any){
 
-        if let refeicao = recuperaRefeicaoDoFormulário(){
+        if let refeicao = recuperaRefeicaoDoFormulário(){ 
             delegate?.add(refeicao)
             navigationController?.popViewController(animated: true)
         } else{
-            Alerta(controller: self).exibe(mensagem: "Erro ao ler o campo felicidade")
+            Alerta(controller: self).exibe(mensagem: "Campo felicidade não deve estar vazio")
         }
 
             }
