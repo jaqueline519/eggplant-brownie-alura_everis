@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA0E2EA425FF9502006ECFD0 /* Alerta.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0E2EA325FF9502006ECFD0 /* Alerta.swift */; };
+		EA0E2EA725FFDED5006ECFD0 /* RemoveRefeicaoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0E2EA625FFDED5006ECFD0 /* RemoveRefeicaoViewController.swift */; };
+		EA33B77F2600556C008A117B /* RefeicaoDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA33B77E2600556C008A117B /* RefeicaoDao.swift */; };
+		EA33B78226005DB1008A117B /* ItemDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA33B78126005DB1008A117B /* ItemDao.swift */; };
+		EA661E1B25FC6AB900FB3299 /* Refeicao.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA661E1A25FC6AB900FB3299 /* Refeicao.swift */; };
+		EA661E1E25FC6BB900FB3299 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA661E1D25FC6BB900FB3299 /* Item.swift */; };
+		EA9D292825FD5D5F00B10BA7 /* RefecoesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9D292725FD5D5F00B10BA7 /* RefecoesTableViewController.swift */; };
+		EAA1659E25FEC06400BBFBC8 /* AdicionarItensViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA1659C25FEC06400BBFBC8 /* AdicionarItensViewController.swift */; };
+		EAA1659F25FEC06400BBFBC8 /* AdicionarItensViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAA1659D25FEC06400BBFBC8 /* AdicionarItensViewController.xib */; };
 		EAA4BDFA25FA6503000906DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA4BDF925FA6503000906DB /* AppDelegate.swift */; };
 		EAA4BDFC25FA6503000906DB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA4BDFB25FA6503000906DB /* SceneDelegate.swift */; };
 		EAA4BDFE25FA6503000906DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA4BDFD25FA6503000906DB /* ViewController.swift */; };
@@ -16,7 +25,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EA0E2EA325FF9502006ECFD0 /* Alerta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerta.swift; sourceTree = "<group>"; };
+		EA0E2EA625FFDED5006ECFD0 /* RemoveRefeicaoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveRefeicaoViewController.swift; sourceTree = "<group>"; };
+		EA33B77E2600556C008A117B /* RefeicaoDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefeicaoDao.swift; sourceTree = "<group>"; };
+		EA33B78126005DB1008A117B /* ItemDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDao.swift; sourceTree = "<group>"; };
 		EA4E5CFC25FB34E400CAD743 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		EA661E1A25FC6AB900FB3299 /* Refeicao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Refeicao.swift; sourceTree = "<group>"; };
+		EA661E1D25FC6BB900FB3299 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		EA9D292725FD5D5F00B10BA7 /* RefecoesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefecoesTableViewController.swift; sourceTree = "<group>"; };
+		EAA1659C25FEC06400BBFBC8 /* AdicionarItensViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdicionarItensViewController.swift; sourceTree = "<group>"; };
+		EAA1659D25FEC06400BBFBC8 /* AdicionarItensViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdicionarItensViewController.xib; sourceTree = "<group>"; };
 		EAA4BDF625FA6503000906DB /* eggplant-brownie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "eggplant-brownie.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAA4BDF925FA6503000906DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EAA4BDFB25FA6503000906DB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +59,11 @@
 		EA990C7125FAD69B00C252C6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EA661E1D25FC6BB900FB3299 /* Item.swift */,
+				EA661E1A25FC6AB900FB3299 /* Refeicao.swift */,
+				EA0E2EA325FF9502006ECFD0 /* Alerta.swift */,
+				EA33B77E2600556C008A117B /* RefeicaoDao.swift */,
+				EA33B78126005DB1008A117B /* ItemDao.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -48,7 +71,10 @@
 		EA990C7225FAD6A300C252C6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				EAA1659C25FEC06400BBFBC8 /* AdicionarItensViewController.swift */,
 				EAA4BDFD25FA6503000906DB /* ViewController.swift */,
+				EA9D292725FD5D5F00B10BA7 /* RefecoesTableViewController.swift */,
+				EA0E2EA625FFDED5006ECFD0 /* RemoveRefeicaoViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -58,6 +84,7 @@
 			children = (
 				EAA4BDFF25FA6503000906DB /* Main.storyboard */,
 				EAA4BE0425FA6507000906DB /* LaunchScreen.storyboard */,
+				EAA1659D25FEC06400BBFBC8 /* AdicionarItensViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -82,9 +109,9 @@
 		EAA4BDF825FA6503000906DB /* eggplant-brownie */ = {
 			isa = PBXGroup;
 			children = (
+				EA990C7125FAD69B00C252C6 /* Model */,
 				EA990C7325FAD6AE00C252C6 /* View */,
 				EA990C7225FAD6A300C252C6 /* Controller */,
-				EA990C7125FAD69B00C252C6 /* Model */,
 				EAA4BDF925FA6503000906DB /* AppDelegate.swift */,
 				EAA4BDFB25FA6503000906DB /* SceneDelegate.swift */,
 				EAA4BE0225FA6507000906DB /* Assets.xcassets */,
@@ -152,6 +179,7 @@
 			files = (
 				EAA4BE0625FA6507000906DB /* LaunchScreen.storyboard in Resources */,
 				EAA4BE0325FA6507000906DB /* Assets.xcassets in Resources */,
+				EAA1659F25FEC06400BBFBC8 /* AdicionarItensViewController.xib in Resources */,
 				EAA4BE0125FA6503000906DB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -163,9 +191,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA0E2EA425FF9502006ECFD0 /* Alerta.swift in Sources */,
+				EA661E1E25FC6BB900FB3299 /* Item.swift in Sources */,
+				EA9D292825FD5D5F00B10BA7 /* RefecoesTableViewController.swift in Sources */,
+				EA0E2EA725FFDED5006ECFD0 /* RemoveRefeicaoViewController.swift in Sources */,
+				EA33B78226005DB1008A117B /* ItemDao.swift in Sources */,
+				EA33B77F2600556C008A117B /* RefeicaoDao.swift in Sources */,
+				EAA1659E25FEC06400BBFBC8 /* AdicionarItensViewController.swift in Sources */,
 				EAA4BDFE25FA6503000906DB /* ViewController.swift in Sources */,
 				EAA4BDFA25FA6503000906DB /* AppDelegate.swift in Sources */,
 				EAA4BDFC25FA6503000906DB /* SceneDelegate.swift in Sources */,
+				EA661E1B25FC6AB900FB3299 /* Refeicao.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
